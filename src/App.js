@@ -126,6 +126,7 @@ const App = () => {
         <h1>Lambda Eats</h1>
         <div className='nav-links'>
           <Link to="/">Home</Link>
+          <span> </span>
           <Link to="/confirmation">Your Order</Link>
         </div>
       </nav>
