@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import Form from './components/Form';
-import Confirmation from './components/Confirmation';
-import schema from './validation/formSchema';
+import Home from './Home';
+import Form from './Form';
+import Confirmation from './Confirmation';
+import schema from './formSchema';
 import * as yup from 'yup';
 import axios from 'axios';
 
@@ -59,6 +59,7 @@ const App = () => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
         setOrders([res.data, ...orders]);
+        console.log('Submitted order', newOrder)
       })
     setFormValues(initialFormValues);
     setFormErrors(initialFormErrors)
@@ -90,6 +91,16 @@ const App = () => {
       customerName: formValues.customerName,
       size: formValues.size,
       sauce: formValues.sauce,
+      pepperoni: formValues.pepperoni,
+      tomatos: formValues.tomatos,
+      sausage: formValues.sausage,
+      bacon: formValues.bacon,
+      garlic: formValues.garlic,
+      spicySausage: formValues.spicySausage,
+      cheese: formValues.cheese,
+      pineapple: formValues.pineapple,
+      pepper: formValues.pepper,
+      extraCheese: formValues.extraCheese,
       toppings: [ 'pepperoni', 'tomatos', 'sausage', 'bacon', 
                   'garlic', 'spicySausage', 'cheese', 'pineapple',
                   'pepper', 'extraCheese'].filter(topping => !!formValues[topping]),

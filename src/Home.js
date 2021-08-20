@@ -9,8 +9,9 @@ export default function Home() {
     }
 
     return (
-        <div className='home-wrapper' id="order-pizza">
+        <div className='home-wrapper'>
             <button
+                id="order-pizza"
                 onClick={routeToOrder}
                 className='orderBtn'
             >

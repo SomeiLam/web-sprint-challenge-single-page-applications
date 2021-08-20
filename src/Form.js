@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function Form(props) {
-    const { url } = useRouteMatch();
     const {
         values,
         submit,
@@ -97,6 +96,7 @@ export default function Form(props) {
                     <div className='flex-container'>
                         <label>
                             <input
+                                id="pepperoni"
                                 type="checkbox"
                                 name="pepperoni"
                                 checked={values.pepperoni}
@@ -106,6 +106,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="tomatos"
                                 type="checkbox"
                                 name="tomatos"
                                 checked={values.tomatos}
@@ -115,6 +116,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="sausage"
                                 type="checkbox"
                                 name="sausage"
                                 checked={values.sausage}
@@ -124,6 +126,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="bacon"
                                 type="checkbox"
                                 name="bacon"
                                 checked={values.bacon}
@@ -133,6 +136,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="garlic"
                                 type="checkbox"
                                 name="garlic"
                                 checked={values.garlic}
@@ -142,6 +146,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="spicySausage"
                                 type="checkbox"
                                 name="spicySausage"
                                 checked={values.spicySausage}
@@ -151,6 +156,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="cheese"
                                 type="checkbox"
                                 name="cheese"
                                 checked={values.cheese}
@@ -160,6 +166,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="pineapple"
                                 type="checkbox"
                                 name="pineapple"
                                 checked={values.pineapple}
@@ -169,6 +176,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="pepper"
                                 type="checkbox"
                                 name="pepper"
                                 checked={values.pepper}
@@ -178,6 +186,7 @@ export default function Form(props) {
                         </label>
                         <label>
                             <input
+                                id="extraCheese"
                                 type="checkbox"
                                 name="extraCheese"
                                 checked={values.extraCheese}
